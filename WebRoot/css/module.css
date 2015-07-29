@@ -1,0 +1,28 @@
+/* Sortting Sidebar*/
+.sidebar p {
+	margin-left:30px;
+}
+.sidebar hr {
+	border:none;
+	border-top:2px solid #6a9e19;
+}
+.sidebar {
+	width:24.4%;
+	height:350px;
+	background:#89c23d;
+	float:left;
+	box-shadow: 0px 5px 10px #888888;
+	position:relative;
+}
+hr {
+	margin:auto;
+}
+a:hover { 
+	text-decoration: none;
+}
+p {
+	font-size:15px;
+	font-weight:bold;
+	margin:10px 0px;
+	color:#456d0a;
+}

@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
+    "http://struts.apache.org/dtds/struts-2.3.dtd">
+
+<struts>   
+    <package name="ordinaryadmin" namespace="/ordinaryadmin" extends="struts-default">
+    	<!-- 定义拦截器 -->
+    	<interceptors>  
+            <interceptor name="authority" class="com.zhbitacm.filter.OrdinaryAdminInterceptot">
+                  <!-- 不拦截的方法 -->
+                  <param name="excludeMethods">login</param>
+            </interceptor>
+            <!-- 拦截器栈 -->  
+            <interceptor-stack name="mydefault">  
+                <interceptor-ref name="defaultStack" />  
+                <interceptor-ref name="authority" />  
+            </interceptor-stack>  
+        </interceptors>
+        
+        <!-- 定义全局Result -->  
+        <global-results> 
+       		<result name="logintimeout">/admin/system/ordinary_login.jsp</result>
+        </global-results>
+        
+		
+		<!-- 普通管理员操作 -->
+		<action name="ordinary_*" class="ordinaryAdminAction" method="{1}" >
+			<result name="loginout">/admin/system/ordinary_login.jsp</result>
+			<interceptor-ref name="mydefault" />
+		</action>
+
+			<!-- 新闻管理 -->
+		<action name="news_*" class="articleAction" method="{1}" >
+			<result name="editPage">/admin/system/ordinary_admin/article-edit.jsp</result>
+			<result name="loginout">/admin/system/ordinary_login.jsp</result>
+			<interceptor-ref name="mydefault" />
+		</action>	
+		
+			<!-- 新闻图片管理 -->
+		<action name="articleimage_*" class="articleImageAction" method="{1}" >
+			<result name="loginout">/admin/system/ordinary_login.jsp</result>
+			<interceptor-ref name="mydefault" />
+		</action>
+		
+		<!-- 会员管理 -->
+		<action name="user_*" class="userAction" method="{1}" >
+			<result name="loginout">/admin/system/ordinary_login.jsp</result>
+			<interceptor-ref name="mydefault" />
+		</action>
+		
+		<!-- 头衔管理 -->
+		<action name="level_*" class="levelAction" method="{1}" >
+			<interceptor-ref name="mydefault" />
+			
+		</action>
+		<!-- 学校管理  -->
+		<action name="school_*" class="schoolAction" method="{1}" >
+			<interceptor-ref name="mydefault" />
+		</action>
+		
+		<!-- 比赛管理  -->
+		<action name="competition_*" class="competitionAction" method="{1}" >
+			<result name="editPage">/admin/system/ordinary_admin/competition-edit.jsp</result>
+			<interceptor-ref name="mydefault" />
+		</action>
+		
+		<action name="group_*" class="competitionGroupAction" method="{1}" >
+			<interceptor-ref name="mydefault" />
+		</action>
+		
+		<!-- 刷新主页 -->
+		<action name="refreshStaticPage_refreshIndex" class="refreshStaticPageAction" method="refreshIndex" >
+			<interceptor-ref name="mydefault" />
+		</action>
+		
+		<!-- banner管理 -->
+		<action name="banner_*" class="bannerAction" method="{1}" >
+			<interceptor-ref name="mydefault" />
+		</action>
+		
+    </package>
+
+</struts>

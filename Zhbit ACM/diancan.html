@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+  <head>    
+  	<title>Zhbit ACM</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet" media="screen">
+    <link href="css/style.css" rel="stylesheet" media="screen">
+    <style type="text/css">
+		.z_cell {
+			margin:10px;
+			padding:10px;
+			width:200px;
+			float:left;
+		}
+		.z_cell input {
+			margin-right:10px;
+		}
+	</style>
+  </head>
+
+  <body>
+  	<div class="swap">
+    	<div class="header">
+        	<div class="head_swap">
+            	<div class="logo">
+                	<h1>
+                    	<a href="#">Zhbit ACM</a>
+                    </h1>     
+                </div>             
+               <form class="form-search search">
+                  <div class="input-append">
+                    <input type="text" class="span2 search-query">
+   					<div class="btn-group">
+                        <button class="btn dropdown-toggle" style="border-radius: 0px 14px 14px 0px;" data-toggle="dropdown">
+                          题目
+                         <span class="caret"></span>
+                        </button>
+                        <ul class="dropdown-menu">
+                         	<li><a href="#">题目</a></li>
+                            <li><a href="#">比赛</a></li>
+                            <li><a href="#">作者</a></li>
+                        </ul>
+					</div>
+                  </div>
+                </form>
+                <ul class="menu">
+                    <li><a href="#" class="btn btn-link">首页</a></li>
+                    <li><a href="#" class="btn btn-link">题库</a></li>
+                    <li><a href="#" class="btn btn-link">比赛</a></li>
+                    <li><a href="#" class="btn btn-link">关于</a></li>
+               </ul> 
+            </div>
+    	</div>
+        <div class="banner">
+        	<div class="">
+                <div class="head_title text-left">
+                  <h1>Welcome to Zhbit ACM<br><small>Online Judge System</small></h1>
+                </div>
+        </div>	
+    </div>
+    <div class="main_swap">
+    	<div class="main text-center">
+        	<h2>点餐系统</h2>
+            <small>作为一个准大三的师兄无耻的告诉你，大学最重要就是要吃得好</small>
+            <br/>
+            <br/>
+            <br/>
+            <br/>
+            <form>
+            	<div class="z_cell" name="goods">
+                	<input type="radio" name="goods" value="1"/>菜名1
+                </div>
+                <div class="z_cell" name="goods">
+                	<input type="radio" name="goods" value="2"/>菜名1
+                </div>
+                
+                <div class="z_cell" name="goods">
+                	<input type="radio" name="goods" value="3"/>菜名1
+                </div>
+                <div class="z_cell" name="goods">
+                	<input type="radio" name="goods" value="4"/>菜名1
+                </div>
+                <div class="z_cell" name="goods">
+                	<input type="radio" name="goods" value="5"/>菜名1
+                </div>
+                <div class="z_cell" name="goods">
+                	<input type="radio" name="goods" value="6"/>菜名1
+                </div>
+                
+                
+               
+                <div class="clearfix"></div>
+                <button id="btn" class="btn" type="button">就吃这货</button>
+                
+                
+            </form>
+            <div class="clearfix"></div>
+        </div>
+    </div>
+    <div class="footer text-center">
+    	<small>Beijing Institute of Technology University Online Judge Bete 1.0</<small>
+        <br/>
+        <small>Copyright © 2013 Zhbit ACM Team. All Rights Reserved.</small>
+        <br/>
+        <small>Designer & Developer : null</small>
+    </div>
+   </div>
+    <script src="js/jquery-1.8.2.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script type="text/javascript">
+		$("#btn").bind('click', function() {
+			var goods = $("input[name='goods']:checked").val();
+			if (goods) {
+				alert(goods);
+			} else {
+				alert("你真的什么都不吃？");
+			}
+		});
+    </script>
+  </body>
+
+</html>
+
+
+
+

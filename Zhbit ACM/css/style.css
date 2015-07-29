@@ -1,0 +1,605 @@
+@charset "utf-8";
+/* 全局 */
+* {
+	margin:0px;
+	padding:0px;
+}
+h1 {
+	margin:0px;
+	padding:0px;
+}
+
+
+
+body {
+	/*background:#EEEEEE;*/
+	font-family: "Helvetica Neue",Helvetica,Arial,"Microsoft Yahei UI","Microsoft YaHei",SimHei,"宋体",simsun,sans-serif;
+	/*background: #0000FF;*/
+	/*background: -moz-linear-gradient(90deg, #00CCFF 0%, #D9304B 100%) repeat scroll 0% 0% transparent;*/
+	/*background: -webkit-linear-gradient(90deg, #00CCFF 0%, #D9304B 100%) repeat scroll 0% 0% transparent;*/
+	box-shadow: rgba(0, 0, 0, 0.2) 0px 3px 7px 0px inset, rgba(0, 0, 0, 0.2) 0px -3px 7px 0px inset;
+
+}
+ul {
+	list-style-type:none;
+	margin:0px;
+}
+ul li{
+	list-style-type:none;
+	margin:0px;
+}
+.swap {
+	
+}
+.clear {
+	clear:both;
+}
+.space_bar {
+	display:block;
+	height:10px;
+}
+.text_center {
+	text-align:center;
+}
+/* header start */
+.header {
+	margin:0;
+	padding:0;
+	display:block;
+	height:87px;
+	background:url(../images/bg-head.jpg) repeat-x;
+}
+.head_swap {
+	width:960px;
+	margin:0 auto;
+}
+.logo {
+	float:left;
+	margin:15px;
+}
+.logo a{
+    font-weight: 550;
+    font-size: 30px;
+    line-height: 36px;
+    color: rgb(47, 48, 48);
+    text-decoration: none;
+}
+
+.menu {
+	margin:0px;
+	margin-top:30px;
+	margin-right:20px;
+	float:right;
+}
+.menu li {
+	display:block;
+	float:left;
+
+}
+.menu li a {
+	color:black;
+}
+.search {
+	margin:0px;
+	margin-top:30px;
+	float:right;
+}
+.search input {
+	color:#DDDDDD;
+}
+
+/* header end */
+
+/* banner start */
+.banner {
+	width:1020px;
+	height:200px;
+	margin:0 auto;
+}
+.banner h1 {
+    font-family: "Helvetica Neue",Helvetica,Arial,"Microsoft Yahei UI","Microsoft YaHei",SimHei,"宋体",simsun,sans-serif;
+    font-weight: 700;
+	font-size:60px;
+	
+	color:white;
+}
+.head_title {
+	margin-top:50px;
+	margin-bottom:10px;
+}
+.head_title small{
+	color:white;
+}
+.login_box {
+}
+.login_box p{
+	float:right;
+	margin:10px;
+}
+/* banner end */
+
+/* main start */
+.main_swap {
+	background:#FFFFFF;
+	min-height:200px;
+	width : 980px;
+	margin-left:auto;
+	margin-right:auto;
+	padding:20px;
+	background-color:rgb(241,241,241);
+}
+.main {
+	width:980px;
+	margin:0 auto;
+	margin-top:20px;
+	min-height :200px;
+	
+}
+.img_show {
+	width:320px;
+	float:left;
+}
+.img_show img {
+	width:320px;
+	
+}
+/* main end */
+
+/* problem start */
+.problem_header {
+	
+} 
+.problem_header b {
+	margin-left:5px;
+	width:180px;
+	display:inline-block;
+	text-align:left;
+} 
+.problem_little_header {
+	width:150px;
+	text-align:right;
+	display:inline-block;	
+}
+.problem_operate {
+	height:50px;	
+}
+.problem_operate ul {
+	list-style-type:none;
+	width:300px;
+	margin:0 auto;
+}
+.problem_operate ul li {
+	float:left;
+}
+.problem_submit_operate {
+	height:50px;
+}
+.problem_submit_operate ul {
+	list-style-type:none;
+	width:300px;
+	margin:0 auto;
+}
+.problem_submit_operate ul li  {
+	float:left;
+	margin:10px;
+}
+.problem_solve {
+	width:650px;
+	height:500px;
+	float:left;
+	margin-top:15px;
+	margin-left:20px;
+}
+/* problen end */
+
+/* footer start */
+.footer {
+	height:80px;
+	background:rgb(245, 245, 245);
+	border-top: 1px solid rgb(221, 221, 221);
+	padding:10px;
+}
+/* footer end */
+
+/* user start */
+.user_info {
+	width:250px;
+	float:left;
+}
+.user_info ul li laber {
+	display:inline-block;
+	width:80px;
+	margin-left:10px;
+}
+.user_info ul li b {
+	display:inline-block;
+	text-align:center;
+	width:100px;
+}
+.user_motto {
+	width:100%;
+	text-indent:2em; 
+	text-align:left;
+}
+
+/* user ends*/
+
+/* rank start */
+.rank_head {
+	background: rgb(249, 249, 249);
+	border:1px solid rgb(221, 221, 221);
+	width:900px;
+}
+.rank_head li {
+	border-bottom:1px solid rgb(221, 221, 221);
+}
+.span_1 {
+	width:40px;
+	text-align:center;
+	margin:0px;
+}
+.span_2 {
+	width:120px;
+	border-left:1px solid rgb(221, 221, 221);
+	margin:0px;
+	padding-left:10px;
+	overflow:hidden;
+}
+.span_3 {
+	width:40px;
+	border-left:1px solid rgb(221, 221, 221);
+	text-align:center;
+	margin:0px;
+}
+.span_4 {
+	width:80px;
+	margin:0px;
+	text-align:center;
+	border-left:1px solid rgb(221, 221, 221);
+}
+.span_5 {
+	width:74px;
+	margin:0px;
+	text-align:center;
+	border-left:1px solid rgb(221, 221, 221);
+}
+.prb_status {
+	overflow:hidden;
+	float: left;
+	width:74px;
+	margin:0px;
+	text-align:center;
+	border-left:1px solid rgb(221, 221, 221);
+}
+.first_blood {
+	background:#390;
+	color:#FFF;
+}
+.slove {
+	background:green;
+	color:#FFF;
+}
+.error {
+	background:red;
+	color:#FFF;
+}
+.undo {
+	background:#fff;
+	color:#000;
+	position:absolute;
+}
+/* rank end */
+
+/* 20130720 add */
+#fm {
+	margin:0;
+	padding:10px 30px;
+}
+.ftitle {
+	font-size:14px;
+	font-weight:bold;
+	padding:5px 0;
+	margin-bottom:10px;
+	border-bottom:1px solid #ccc;
+}
+.fitem {
+	margin-bottom:5px;
+	width:530px;
+	margin:0 auto;
+}
+.fitem label {
+	display:block;
+	float:left;
+	line-height:30px;
+	width:80px;
+}
+.finput {
+	float:left;
+}
+.oj_form {
+	margin-top:20px;
+}
+.ob_b {
+	margin-left:10px;
+	margin-right:10px;
+	line-height:30px;
+}
+.box_center {
+	margin:0 auto;
+	text-align:center;
+}
+/* 20130720 add end*/
+
+/* Bootstrap code examples
+-------------------------------------------------- */
+
+/* Base class */
+.bs-problem {
+  position: relative;
+  margin: 15px 0;
+  padding: 39px 19px 14px;
+  *padding-top: 19px;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  border-radius: 4px;
+}
+
+/* Echo out a label for the example */
+.bs-problem:after {
+  content: "Problem Description";
+  position: absolute;
+  top: -1px;
+  left: -1px;
+  padding: 3px 7px;
+  font-size: 12px;
+  font-weight: bold;
+  background-color: #f5f5f5;
+  border: 1px solid #ddd;
+  color: #9da0a4;
+  -webkit-border-radius: 4px 0 4px 0;
+     -moz-border-radius: 4px 0 4px 0;
+          border-radius: 4px 0 4px 0;
+}
+.bs-problem-description:after {
+  content: "Problem Description";
+}
+.bs-problem-input:after {
+  content: "Input";
+}
+.bs-problem-output:after {
+  content: "Output";
+}
+.bs-problem-sampleinput:after {
+  content: "Sample Input";
+}
+.bs-problem-sampleoutput:after {
+  content: "Sample Output";
+}
+.bs-problem-tip:after {
+  content: "Tip";
+}
+.bs-problem-source:after {
+  content: "Source";
+}
+.bs-problem-userinfo:after {
+  content: "用户信息";
+}
+.bs-problem-problemlist:after {
+  content: "Problem List";
+}
+.bs-problem-contentlist:after {
+  content: "Contest List";
+}
+.bs-problem-rank:after {
+  content: "Rank";
+}
+.bs-problem-viewcode:after {
+  content: "View Code";
+}
+.bs-problem-compilatiponerror:after {
+  content: "Compilatipon Error";
+}
+.bs-problem-competitionManage:after {
+  content: "竞赛管理";
+}
+.bs-problem-mycompetitionlist:after {
+  content: "我的竞赛列表";
+}
+
+
+
+/* 201309081123 add */
+.bs-select-left:after {
+	content: "题目列表";
+}
+.bs-select-center:after {
+	content: "题目描述";
+}
+.bs-select-right:after {
+	content: "题目答案";
+}
+.bs-select-left {
+	width:200px;
+	float:left;
+	min-height:300px;
+}
+.bs-select-left ul{
+	margin-top:20px;
+}
+
+.bs-select-left ul li {
+	font-size:16px;
+	margin:5px;
+	text-align:center;
+}
+
+.bs-select-left ul li a {
+	color:#000;
+	text-decoration:none;
+}
+
+
+.bs-select-left ul li.active a{
+	font-weight:bold;
+	color:#F00;
+	font-size:18px;
+}
+.bs-select-center {
+	width:380px;
+	float:left;
+	min-height:300px;
+	
+}
+.bs-select-center ul {
+	margin-left:20px;
+	margin-top:20px;
+}
+.bs-select-center ul li{
+	margin-top:10px;
+	margin-bottom:10px;
+}
+
+.bs-select-center ul li input{
+	margin-top:0px;
+}
+.bs-select-center ul li label{
+	margin-left:10px;
+ 	font-size:16px;
+	font-weight:normal;
+	line-height:24px;
+	display:inline-block;
+}
+.bs-select-center h6{
+	text-align:right;
+}
+.bs-select-right {
+	width:200px;
+	float:left;
+	min-height:300px;
+}
+.bs-select-right h6 {
+	text-align:center;
+}
+.pborder {
+	width:3%;
+	min-height:300px;
+	float:left;
+}
+/* 201309081123 add end */
+
+
+/* 2014/5/29 chenyueling */
+
+.competition-detail{
+	width: 500px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.competition-info{
+	width: 940px;
+}
+
+.bs-competition-know:after {
+  content: "比赛须知";
+}
+
+.bs-competition-info:after {
+  content: "比赛信息";
+}
+.bs-competition-detail:after {
+  content: "比赛详情";
+}
+
+.bs-team-info:after {
+  content: "队伍信息";
+}
+
+
+
+.bs-captain-info:after {
+  content: "队长信息";
+}
+
+.bs-player-info:after{
+ content: "队员信息";		
+}
+
+.competition-detail-title{
+	width:980px; 
+	margin-left: auto;
+	margin-right: auto;
+	text-align: center;
+}
+
+
+.jion_competition_submit_operate {
+	height:50px;
+}
+.jion_competition_submit_operate ul {
+	list-style-type:none;
+	width:450px;
+	margin:0 auto;
+}
+.jion_competition_submit_operate ul li  {
+	float:right;
+	margin:10px;
+}
+
+#nowposition_1 {
+	width: 76px;
+}
+
+
+.nowposition a{
+	text-decoration:none;
+	color: rgb(123,123,123);
+}
+
+
+.bs-new-list:after{
+	 content: "News";	
+}
+
+
+.bs-news-content:after{
+	content: "Content";		
+}
+
+
+ #share_art a {
+      text-decoration:none;
+      color: rgb(138,138,138);
+  }
+  
+ #new_art a{
+ 	text-decoration:none;
+      color: rgb(138,138,138);
+ }
+ 
+ #share_art	a:hover {
+	color: #1E90FF;
+}
+
+#new_art	a:hover {
+	color: #1E90FF;
+}
+ 
+ 
+ a{
+ 	text-decoration:none;
+ }
+a:hover{
+   color: rgb(221,221,221);
+   text-decoration:none;
+  }
+
+  .bs-competition-teamate:after{
+	content:"队员信息";
+  }		
+
+.bs-join-team-list:after{
+	content: "参赛队伍";
+}

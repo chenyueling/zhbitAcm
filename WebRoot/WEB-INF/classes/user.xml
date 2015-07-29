@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
+    "http://struts.apache.org/dtds/struts-2.3.dtd">
+
+<struts>   
+    <package name="user" namespace="/user" extends="struts-default">
+    	<!-- 定义拦截器 -->
+    	<interceptors>  
+            <interceptor name="authority" class="com.zhbitacm.filter.UserInterceptot">
+                  <!-- 不拦截的方法 -->
+                  <param name="excludeMethods">editById</param>
+                  <param name="excludeMethods">getContests</param>
+            </interceptor>
+            <!-- 拦截器栈 -->  
+            <interceptor-stack name="mydefault">  
+                <interceptor-ref name="defaultStack" />  
+                <interceptor-ref name="authority" />  
+            </interceptor-stack>  
+        </interceptors>
+        
+        <!-- 定义全局Result -->  
+        <global-results> 
+            <result name="return_404">/WEB-INF/errorPage/404.jsp</result>
+       		<result name="logintimeout">/login.jsp</result>
+        </global-results>
+		
+				<!-- 会员管理 -->
+		<!--<action name="user_*" class="userAction" method="{1}" >
+			<interceptor-ref name="mydefault" />
+		</action>
+		
+		
+		--><action name="user_login" class="userAction" method="login" >
+		</action>
+		<action name="user_register" class="userAction" method="register" >
+		</action>
+		<action name="user_getuserinfo" class="userAction" method="getUserInfo">
+			<interceptor-ref name="mydefault" />
+			<result name="success">/user_info.jsp</result>
+		</action>
+		<action name="user_logout" class="userAction" method="logout">
+			<result name="logout">/login.jsp</result>
+		</action>
+		<action name="user_beforeupdate" class="userAction" method="beforeupdate">
+			<interceptor-ref name="mydefault" />
+			<result name="success">/update_user_info.jsp</result>
+		</action>
+		<action name="user_update" class="userAction" method="update">
+		</action>
+		<action name="user_updatepassword" class="userAction" method="updatePassword">
+		</action>
+		<action name="competition_getContests" class="competitionAction" method="getContests" >
+			<result name="contests">/competition_list.jsp</result>
+		</action>
+		
+		<action name="competition_info" class="competitionAction" method="editById" >
+			<result name="editPage">/competition_info.jsp</result>
+		</action>
+
+		<action name="group_getGroups" class="competitionGroupAction" method="getGroups" >
+			<result name="groups">/join_team_list.jsp</result>
+		</action>
+		
+		<action name="group_createTeam" class="competitionGroupAction" method="createTeam" >
+			<interceptor-ref name="mydefault" />
+			<result name="createTeam">/competition_create_team.jsp</result>
+		</action>
+		<action name="group_saveTeam" class="competitionGroupAction" method="saveTeam" >
+			<interceptor-ref name="mydefault" />
+			<result name="success">/join_competition_info.jsp</result>
+		</action>
+		<action name="group_addCompetitioner" class="competitionGroupAction" method="addCompetitioner" >
+			<interceptor-ref name="mydefault" />
+			<result name="success">/join_competition_info.jsp</result>
+		</action>
+		
+		<action name="group_joinTeam" class="competitionGroupAction" method="joinTeam" >
+			<interceptor-ref name="mydefault" />
+			<result name="joinTeam">/competition_join_team.jsp</result>
+		</action>
+		
+		<action name="group_getVoGroup" class="competitionGroupAction" method="getVoGroup" >
+			<result name="success">/join_competition_info.jsp</result>
+		</action>
+		
+		
+		
+    </package>
+
+</struts>

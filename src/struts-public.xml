@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
+    "http://struts.apache.org/dtds/struts-2.3.dtd">
+
+<struts>   
+    <package name="public" namespace="/" extends="json-default">
+
+         <!-- 定义全局Result -->  
+        <global-results>   
+            <result name="return_404">/WEB-INF/errorPage/404.jsp</result>
+            <result name="return_success">/WEB-INF/page/success.jsp</result>
+            <result name="return_error">/WEB-INF/page/error.jsp</result>
+        </global-results>
+        <!-- 验证码 -->
+		<action name="randomCode" class="validateCodeAction" method="randomCode" >
+		</action>
+		<!-- 初始化数据 -->
+		<action name="initData" class="initDataAction" method="initData" >
+			<result name="success">/public/noticedialog.jsp?rUrl=index.jsp</result>
+			<result name="input">/public/noticedialog.jsp?rUrl=initData.jsp</result>
+			<result name="error">/public/noticedialog.jsp?rUrl=initData.jsp</result>
+		</action>
+		
+		<!-- 异步验证用户是否登录 -->
+		<action name="validateLogin" class="userAction" method="validateStatus" >
+		</action>
+		
+		<action name="news_list" class="articleAction" method="articleList">
+			<result name="news_list">/WEB-INF/news/news_list.jsp</result>
+		</action>
+		
+    </package>
+
+</struts>

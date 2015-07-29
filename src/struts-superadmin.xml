@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
+    "http://struts.apache.org/dtds/struts-2.3.dtd">
+
+<struts>   
+    <package name="superadmin" namespace="/superadmin" extends="struts-default">
+    	<!-- 定义拦截器 -->
+    	<interceptors>  
+            <interceptor name="authority" class="com.zhbitacm.filter.SuperAdminInterceptot">
+                  <!-- 不拦截的方法 -->
+                  <param name="excludeMethods">login</param>
+            </interceptor>
+            <!-- 拦截器栈 -->  
+            <interceptor-stack name="mydefault">  
+                <interceptor-ref name="defaultStack" />  
+                <interceptor-ref name="authority" />  
+            </interceptor-stack>  
+        </interceptors>
+        
+        <!-- 定义全局Result -->  
+        <global-results> 
+         <result name="return_404">/WEB-INF/errorPage/404.jsp</result>
+       		<result name="logintimeout">/admin/system/super_login.jsp</result>
+        </global-results>
+      
+		
+		<!-- 超级管理员操作 -->
+		<action name="superadmin_*" class="superAdminAction" method="{1}" >
+			<result name="loginout">/admin/system/super_login.jsp</result>
+			<interceptor-ref name="mydefault" />
+		</action>
+
+		<!-- 普通管理员管理 -->
+		<action name="ordinary_*" class="ordinaryAdminAction" method="{1}" >
+			<interceptor-ref name="mydefault" />
+		</action>
+			
+			
+		<!-- 刷新主页 -->
+		<action name="refreshStaticPage_refreshIndex" class="refreshStaticPageAction" method="refreshIndex" >
+			<interceptor-ref name="mydefault" />
+		</action>	
+		
+		<!-- banner管理 -->
+		<action name="banner_*" class="bannerAction" method="{1}" >
+			<interceptor-ref name="mydefault" />
+		</action>
+		
+    </package>
+
+</struts>

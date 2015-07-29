@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+  <head>    
+  	<title>${voArticle.title}</title> 
+  	<base href="${basePath}"> 
+  	 <#include "common.html" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Bootstrap -->
+  </head>
+
+  <body>
+  	<div class="swap">
+    	<#include "header.html" />
+        <div class="banner">
+        	  <img src="images/003.png" alt=""> 	
+    </div>
+    <div class="main_swap">
+    	<div class="main">
+            <div class="problem_header text-center">
+                <h1>${voArticle.title}</h1>
+                <br/>
+                <small>
+                    <div class="problem_little_header">
+                        <span class="label label-success">作者</span>
+                    </div>
+                    <b>${voArticle.author}</b> 
+                    <div class="problem_little_header">
+                        <span class="label label-success">时间</span>
+                    </div>
+                    <b>${voArticle.publishTime}</b>
+                </small>
+                <div class="clearfix"></div>
+                <small>
+                    <div class="problem_little_header">
+                        <span class="label label-success">来源</span>
+                    </div>
+                    <b>${voArticle.source}</b>
+                    
+                    <div class="problem_little_header">
+                        <span class="label label-success">阅读量</span>
+                    </div>
+                    <b>${voArticle.pageView}</b>
+                </small>
+            </div>
+            <div class="problem_content">
+                <div class="bs-problem bs-news-content">
+                    ${voArticle.content}
+              </div>
+            </div>
+        </div>
+    </div>
+   <# include "footer.jsp" />
+  </body>
+
+</html>
+
+
+
+

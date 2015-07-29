@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Zhbit ACM</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Bootstrap -->
+  <link href="css/bootstrap.min.css" rel="stylesheet" media="screen">
+  <link href="css/scojs.css" rel="stylesheet" media="screen">
+  <link href="css/style.css" rel="stylesheet" media="screen"></head>
+
+<body>
+  <div class="swap">
+    <div class="header">
+      <div class="head_swap">
+        <div class="logo">
+          <h1>
+            <a href="#">Zhbit ACM</a>
+          </h1>
+        </div>
+        <form class="form-search search" action="user/group_save" method="get">
+          <div class="input-append">
+            <input type="text" class="span2 search-query">
+            <div class="btn-group">
+              <button class="btn dropdown-toggle" style="border-radius: 0px 14px 14px 0px;" data-toggle="dropdown">
+                题目
+                <span class="caret"></span>
+              </button>
+              <ul class="dropdown-menu">
+                <li>
+                  <a href="#">题目</a>
+                </li>
+                <li>
+                  <a href="#">比赛</a>
+                </li>
+                <li>
+                  <a href="#">作者</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </form>
+        <ul class="menu">
+          <li>
+            <a href="index.html" class="btn btn-link">首页</a>
+          </li>
+          <li>
+            <a href="problem_list.html" class="btn btn-link">题库</a>
+          </li>
+          <li>
+            <a href="competition.html" class="btn btn-link">比赛</a>
+          </li>
+          <li>
+            <a href="about.html" class="btn btn-link">关于</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="banner">
+      <img src="images/003.png" alt=""></div>
+  </div>
+  <div class="main_swap">
+    <div class="main">
+      <div class="competition-detail-title">
+        <h1>创建新队伍</h1>
+      </div>
+      <div class="bs-problem bs-team-info competition-detail">
+        <form>
+          <table class="table table-striped" >
+            <tr class="success"  >
+              <td style="text-align:center;">队伍名称（中文）</td>
+              <td>
+                <input type="text" name="teamNameC" />
+              </td>
+            </tr>
+            <tr class="info"  >
+              <td style="text-align:center;">队伍名称（英文）</td>
+              <td>
+                <input type="text" name="teamNameE" />
+              </td>
+            </tr>
+          </table>
+        </div>
+        <div class="bs-problem bs-captain-info competition-detail">
+          <table class="table table-striped" >
+            <tr>
+              <td style="text-align:center;width:159px;">姓名</td>
+              <td>
+                <input type="text" name="name" />
+              </td>
+            </tr>
+            <tr>
+              <td style="text-align:center;">学号</td>
+              <td>
+                <input type="text" name="stuId" />
+              </td>
+            </tr>
+            <tr>
+              <td style="text-align:center;">电话</td>
+              <td>
+                <input type="text" name="phone" />
+              </td>
+            </tr>
+            <tr>
+              <td style="text-align:center;">邮箱</td>
+              <td>
+                <input type="text" name="email" />
+              </td>
+            </tr>
+          </table>
+          <div class="jion_competition_submit_operate">
+            <ul>
+              <li>
+                <button class="btn btn-success">提交</button>
+              </li>
+              <li>
+                <button class="btn btn-warning">重置</button>
+              </li>
+            </ul>
+          </div>
+
+        </form>
+      </div>
+      <div class="clearfix"></div>
+    </div>
+    <div class="footer text-center">
+      <small>
+        Beijing Institute of Technology University Online Judge Bete 1.0
+      </<small>
+      <br/>
+      <small>Copyright © 2013 Zhbit ACM Team. All Rights Reserved.</small>
+      <br/>
+      <small>Designer & Developer : null</small>
+    </div>
+  </div>
+  <script src="js/jquery-1.8.2.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/sco.panes.js"></script>
+  <script src="js/sco.tab.js"></script>
+
+</body>
+
+</html>
